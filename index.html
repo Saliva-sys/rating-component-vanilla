@@ -1,49 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <div class="rating__card">
+        <!-- Rating state start -->
+        <img src="./images/icon-star.svg" alt="star" aria-hidden="true" />
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
 
-  <!-- Rating state start -->
+        <div class="rating__btn">
+          <button class="btn" type="button">1</button>
+          <button class="btn" type="button">2</button>
+          <button class="btn" type="button">3</button>
+          <button class="btn" type="button">4</button>
+          <button class="btn" type="button">5</button>
+        </div>
+        <button class="submit__btn" type="button">Submit</button>
+        <!-- Rating state end -->
+      </div>
 
-  How did we do?
+      <div class="tnak__you-card">
+        <!-- Thank you state start -->
+        <p>
+          You selected<span id="user__rating"></span>
+          <!-- Add rating here -->
+          out of 5 Thank you! We appreciate you taking the time to give a
+          rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+        <!-- Thank you state end -->
+      </div>
+    </main>
 
-  1 2 3 4 5
+    <footer className="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        className="attribution-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/Saliva-sys"
+        className="attribution-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Adriana Weidlichova</a
+      >.
+    </footer>
 
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

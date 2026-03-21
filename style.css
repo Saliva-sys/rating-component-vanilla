@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --color-orange-500: hsl(25deg 97% 53%);
+  --color-white: hsl(0deg 100% 100%);
+  --color-grey-500: hsl(217deg 12% 63%);
+  --color-grey-900: hsl(213deg 19% 18%);
+  --color-grey-950: hsl(216deg 12% 8%);
+  --color-blue: hsl(228deg 45% 44%);
+}
+
+/* FOOTER DEFINITION */
+.attribution {
+  padding-block-start: 0.5rem;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution-link {
+  color: var(--color-blue);
+}
+
+/* Desktop version */
+@media (width >= 64rem) {
+}

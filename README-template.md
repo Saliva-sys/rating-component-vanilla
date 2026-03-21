@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -25,6 +25,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### The challenge
 
+V tejto verzii som sa zamerala na pochopenie základov JavaScriptu, ako sú Event Listeners a manipulácia s DOM prvkami bez použitia frameworkov.
 Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
@@ -38,7 +39,7 @@ Users should be able to:
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
 Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
@@ -47,7 +48,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/Saliva-sys/rating-component-vanilla.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live URL](https://saliva-sys.github.io/rating-component-vanilla/)
 
 ## My process
 
@@ -66,6 +67,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+Pri práci na tomto projekte som sa zamerala na pochopenie logiky "Vstup - Spracovanie - Výstup" v JavaScripte:
+
+1. **Selektory (DOM):** Ako identifikovať prvky v HTML (tlačidlá, karty, textové polia), aby s nimi JS mohol pracovať.
+2. **Udalosti (Events):** Princíp `addEventListener`, ktorý čaká na kliknutie používateľa.
+3. **Práca s kolekciami (forEach):** Ako efektívne ovládať skupinu tlačidiel (rating 1-5) pomocou jedného cyklu.
+4. **Stavy aplikácie:** Logika prepínania medzi "Rating State" (výber) a "Thank You State" (potvrdenie) pomocou zmeny CSS štýlov (`display: none/flex`).
+5. **Dátová kontinuita:** Uloženie vybranej hodnoty do premennej, aby sa nestratila pri zmene zobrazenia karty.
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
@@ -73,15 +82,17 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  console.log("🎉");
+};
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.

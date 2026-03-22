@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
@@ -18,9 +19,16 @@
     <main>
       <div class="rating__card">
         <!-- Rating state start -->
-        <img src="./images/icon-star.svg" alt="star" aria-hidden="true" />
-        <h1>How did we do?</h1>
-        <p>
+        <div class="star__symbol">
+          <img
+            src="./images/icon-star.svg"
+            class="img__star"
+            alt="star"
+            aria-hidden="true"
+          />
+        </div>
+        <h1 class="rating__card-title">How did we do?</h1>
+        <p class="rating__card-text">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
@@ -36,7 +44,7 @@
         <!-- Rating state end -->
       </div>
 
-      <div class="tnak__you-card">
+      <div class="thank__you-card hidden">
         <!-- Thank you state start -->
         <p>
           You selected<span id="user__rating"></span>

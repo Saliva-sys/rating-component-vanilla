@@ -67,37 +67,38 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Pri práci na tomto projekte som sa zamerala na pochopenie logiky "Vstup - Spracovanie - Výstup" v JavaScripte:
+In this project, I focused on mastering the "Input - Process - Output" logic using vanilla JavaScript. Here are the key takeaways:
 
-1. **Selektory (DOM):** Ako identifikovať prvky v HTML (tlačidlá, karty, textové polia), aby s nimi JS mohol pracovať.
-2. **Udalosti (Events):** Princíp `addEventListener`, ktorý čaká na kliknutie používateľa.
-3. **Práca s kolekciami (forEach):** Ako efektívne ovládať skupinu tlačidiel (rating 1-5) pomocou jedného cyklu.
-4. **Stavy aplikácie:** Logika prepínania medzi "Rating State" (výber) a "Thank You State" (potvrdenie) pomocou zmeny CSS štýlov (`display: none/flex`).
-5. **Dátová kontinuita:** Uloženie vybranej hodnoty do premennej, aby sa nestratila pri zmene zobrazenia karty.
+_1. DOM Manipulation & Selectors_
+I practiced how to accurately identify and "grab" HTML elements so JavaScript can interact with them. Understanding the difference between selecting a single element (querySelector) and a collection of elements (querySelectorAll) was crucial for this layout.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+_2. Handling Collections with .forEach()_
+Instead of writing unique code for each rating button (1-5), I implemented the forEach method. This allowed me to apply a single click listener to the entire group of buttons, keeping the code "DRY" (Don't Repeat Yourself).
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```js
+ratingSelection.forEach((rating) => {
+  rating.addEventListener("click", () => {
+    // Logic for selection happens here
+  });
+});
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+_3. State Reset Logic_
+One of the biggest challenges was ensuring that only one rating is selected at a time. I learned to implement a "Reset" loop that clears the active styles from all buttons before applying the "Selected" style to the clicked one.
+
+_4. Data Continuity & UI Switching_
+I learned how to store a user's choice in a variable (allRating) so it persists even after the initial UI (the rating card) is hidden. Switching between the "Rating" and "Thank You" states was handled by toggling a .hidden CSS class.
+
+```js
+if (allRating > 0) {
+  userRating.textContent = allRating; // Transferring data to the next screen
+  ratingCard.classList.add("hidden"); // UI State Switch
+  thanksCard.classList.remove("hidden");
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+_5. Clean CSS Reset for Interactive Elements_
+I learned the importance of a custom CSS reset for buttons to remove browser-default styles. This provided a "blank canvas" that allowed me to have full control over the hover and active states via JavaScript and CSS variables.
 
 ### Continued development
 

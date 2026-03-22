@@ -9,6 +9,106 @@
   --color-blue: hsl(228deg 45% 44%);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-grey-950);
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+}
+
+button,
+p,
+span,
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-grey-500);
+  color: var(--color-white);
+}
+
+.submit__btn {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-orange-500);
+  color: var(--color-grey-500);
+}
+
+.rating__card {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: clamp(1.5rem, calc(2.852rem - 1.502vw), 2.5rem);
+  padding-inline: clamp(1.55rem, calc(1.374rem + 0.751vw), 2.05rem)
+    clamp(1.55rem, calc(1.356rem + 0.826vw), 2.1rem);
+  padding-block-start: clamp(1.6rem, calc(1.424rem + 0.751vw), 2.1rem);
+  height: clamp(22.5rem, calc(21.232rem + 5.408vw), 26.1rem);
+  width: clamp(20.5rem, calc(18.599rem + 8.113vw), 25.9rem);
+  border-radius: clamp(1rem, calc(0.648rem + 1.502vw), 2rem);
+  background-color: var(--color-grey-900);
+}
+
+.star__symbol {
+  background-color: var(--color-grey-500);
+  border: none;
+  border-radius: 50%;
+  width: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
+  height: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.img__star {
+  width: 1rem;
+  height: auto;
+}
+
+.rating__card-title {
+  padding-block: clamp(1.25rem, calc(0.915rem + 1.427vw), 2.2rem)
+    clamp(0.65rem, calc(0.785rem - 0.15vw), 0.75rem);
+  font-size: clamp(1.53rem, calc(1.45rem + 0.4vw), 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.029rem;
+  color: var(--color-white);
+}
+
+.rating__card-text {
+  font-size: clamp(0.91rem, calc(0.879rem + 0.136vw), 0.98rem);
+  font-weight: 700;
+  letter-spacing: -0.0349rem;
+  line-height: 1.4rem;
+  color: var(--color-grey-500);
+}
+
+.hidden {
+  display: none;
+}
+
 /* FOOTER DEFINITION */
 .attribution {
   padding-block-start: 0.5rem;
@@ -22,4 +122,12 @@
 
 /* Desktop version */
 @media (width >= 64rem) {
+  .rating__card-title {
+    letter-spacing: -0.016rem;
+  }
+
+  .rating__card-text {
+    letter-spacing: -0.041rem;
+    line-height: 1.5rem;
+  }
 }

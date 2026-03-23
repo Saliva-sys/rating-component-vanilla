@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -12,9 +11,9 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
+
   <body>
     <main>
       <div class="rating__card">
@@ -32,7 +31,8 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-
+      </div>
+      <div class="rating__card-button">
         <div class="rating__btn">
           <button class="btn" type="button">1</button>
           <button class="btn" type="button">2</button>
@@ -40,41 +40,52 @@
           <button class="btn" type="button">4</button>
           <button class="btn" type="button">5</button>
         </div>
-        <button class="submit__btn" type="button">Submit</button>
+        <button class="submit__btn" type="button">SUBMIT</button>
         <!-- Rating state end -->
       </div>
 
       <div class="thank__you-card hidden">
         <!-- Thank you state start -->
-        <p>
-          You selected<span id="user__rating"></span>
+        <img
+          src="./images/illustration-thank-you.svg"
+          class="thank__you-img"
+          alt="thank you"
+        />
+        <p class="thank__you-selection">
+          You selected
+          <span class="user__rating">4</span>
           <!-- Add rating here -->
-          out of 5 Thank you! We appreciate you taking the time to give a
-          rating. If you ever need more support, don’t hesitate to get in touch!
+          out of 5
         </p>
-
+        <h2 class="thank__you-thanks">Thank you!</h2>
+        <p class="thank__you-text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don&rsquo;t hesitate to get in touch!
+        </p>
         <!-- Thank you state end -->
       </div>
     </main>
-
-    <footer className="attribution">
+    <footer class="attribution">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
-        className="attribution-link"
+        class="attribution-link"
         target="_blank"
         rel="noopener noreferrer"
-        >Frontend Mentor</a
-      >. Coded by
+      >
+        Frontend Mentor
+      </a>
+      . Coded by
       <a
         href="https://github.com/Saliva-sys"
-        className="attribution-link"
+        class="attribution-link"
         target="_blank"
         rel="noopener noreferrer"
-        >Adriana Weidlichova</a
-      >.
+      >
+        Adriana Weidlichova
+      </a>
+      .
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

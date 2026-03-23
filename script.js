@@ -6,8 +6,9 @@ const ratingSelection = document.querySelectorAll(".btn");
 // potrebujem definovat premenne, ktore sa budu menit aj s tlacidlom submit
 const submitBtn = document.querySelector(".submit__btn");
 const ratingCard = document.querySelector(".rating__card");
+const ratingButton = document.querySelector(".rating__card-button");
 const thanksCard = document.querySelector(".thank__you-card");
-const userRating = document.querySelector("#user__rating");
+const userRating = document.querySelector(".user__rating");
 
 // potrebujem definovat vyber premennych/reakciu na kliknutie
 ratingSelection.forEach((rating) => {
@@ -34,6 +35,7 @@ submitBtn.addEventListener("click", () => {
   if (allRating > 0) {
     userRating.textContent = allRating; // vlozim vybrane cislo do skatulky
     ratingCard.classList.add("hidden"); // zatvorim kartu vyberu
+    ratingButton.classList.add("hidden");
     thanksCard.classList.remove("hidden"); // otvorim kartu podakovania
   } else {
     alert("Please select a rating!"); // potrebujem zadefinovat co sa stane ak kliknem tlacidlo submit pred vyberom

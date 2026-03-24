@@ -15,9 +15,9 @@ const thankYou = document.querySelector(".thank__you-thanks");
 ratingSelection.forEach((rating) => {
   rating.addEventListener("click", () => {
     //potrebujem aby vsetky premenne reagovali na click  a zmenili farbu pisma a pozadia ale musim ich vratit do povodnej farby nez nieco zafarbim
-    ratingSelection.forEach((rating) => {
-      rating.style.color = "";
-      rating.style.backgroundColor = "";
+    ratingSelection.forEach((option) => {
+      option.style.color = "";
+      option.style.backgroundColor = "";
     });
     // vybrane premenne potrebujem ulozit do skalutky
     allRating = rating.textContent;

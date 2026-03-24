@@ -9,6 +9,7 @@ const ratingCard = document.querySelector(".rating__card");
 const ratingButton = document.querySelector(".rating__card-button");
 const thanksCard = document.querySelector(".thank__you-card");
 const userRating = document.querySelector(".user__rating");
+const thankYou = document.querySelector(".thank__you-thanks");
 
 // potrebujem definovat vyber premennych/reakciu na kliknutie
 ratingSelection.forEach((rating) => {
@@ -40,4 +41,10 @@ submitBtn.addEventListener("click", () => {
   } else {
     alert("Please select a rating!"); // potrebujem zadefinovat co sa stane ak kliknem tlacidlo submit pred vyberom
   }
+});
+
+// definujem reakciu tlacidla "Tnak You"
+thankYou.addEventListener("click", () => {
+  thankYou.style.color = "var(--color-orange-500)";
+  window.location.reload();
 });
